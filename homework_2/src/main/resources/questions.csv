@@ -1,0 +1,21 @@
+question_id;question;answer;is_correct
+1;"What is a correct syntax to output ""Hello World"" in Java?";"System.out.println(""Hello World"");";true
+1;"What is a correct syntax to output ""Hello World"" in Java?";"Console.WriteLine(""Hello World"");";false
+1;"What is a correct syntax to output ""Hello World"" in Java?";"echo(""Hello World"");";false
+1;"What is a correct syntax to output ""Hello World"" in Java?";"print (""Hello World"");";false
+2;"How do you insert COMMENTS in Java code?";"// This is a comment";true
+2;"How do you insert COMMENTS in Java code?";"# This is a comment";false
+2;"How do you insert COMMENTS in Java code?";"-- This is a comment";false
+2;"How do you insert COMMENTS in Java code?";"/* This is a comment";false
+3;"Which data type is used to create a variable that should store text?";String;true
+3;"Which data type is used to create a variable that should store text?";Txt;false
+3;"Which data type is used to create a variable that should store text?";string;false
+3;"Which data type is used to create a variable that should store text?";myString;false
+4;"How do you create a variable with the numeric value 5?";"int x = 5;";true
+4;"How do you create a variable with the numeric value 5?";"num x = 5;";false
+4;"How do you create a variable with the numeric value 5?";"x = 5;";false
+4;"How do you create a variable with the numeric value 5?";"float x = 5;";false
+5;"How do you create a variable with the floating number 2.8?";"float x = 2.8f;";true
+5;"How do you create a variable with the floating number 2.8?";"int x = 2.8f;";false
+5;"How do you create a variable with the floating number 2.8?";"byte x = 2.8f;";false
+5;"How do you create a variable with the floating number 2.8?";"x = 2.8f;";false
