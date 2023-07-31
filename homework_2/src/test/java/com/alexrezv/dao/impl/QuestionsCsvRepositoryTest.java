@@ -1,6 +1,5 @@
 package com.alexrezv.dao.impl;
 
-import com.alexrezv.Main;
 import com.alexrezv.conf.CsvRepoConfig;
 import com.alexrezv.dao.QuestionsRepository;
 import com.alexrezv.domain.Answer;
@@ -9,26 +8,28 @@ import io.vavr.collection.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.mockito.Mock;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 
 @DisplayName("Репо (дао) для работы с вопросами в CSV файле ")
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = Main.class)
 class QuestionsCsvRepositoryTest {
-
-    @Autowired
-    private CsvRepoConfig csvRepoConfig;
 
     private QuestionsRepository repository;
 
+    @Mock
+    private CsvRepoConfig csvRepoConfig;
+
     @BeforeEach
     void setUp() {
+        csvRepoConfig = mock(CsvRepoConfig.class);
+        when(csvRepoConfig.isSkipFirstRow()).thenReturn(false);
+        when(csvRepoConfig.getRowSeparator()).thenReturn(',');
+        when(csvRepoConfig.getFileName()).thenReturn("questions_test.csv");
+
         repository = new QuestionsCsvRepository(csvRepoConfig);
     }
 
