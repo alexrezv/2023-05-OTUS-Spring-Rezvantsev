@@ -7,6 +7,6 @@ public interface QuestionsService {
 
     List<Question> getQuestions();
 
-    void printQuestionWithAnswers(Question question);
+    String stringifyQuestion(Question question);
 
 }
