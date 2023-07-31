@@ -27,4 +27,10 @@ public class IOStreamsService implements IOService {
         return scanner.nextLine();
     }
 
+    @Override
+    public String askForInput(String prompt) {
+        printLine(prompt);
+        return readLine();
+    }
+
 }

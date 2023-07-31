@@ -6,4 +6,6 @@ public interface IOService {
 
     String readLine();
 
+    String askForInput(String prompt);
+
 }
