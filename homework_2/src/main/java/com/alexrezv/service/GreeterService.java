@@ -1,6 +1,6 @@
 package com.alexrezv.service;
 
-import io.vavr.collection.Map;
+import com.alexrezv.domain.User;
 
 public interface GreeterService {
 
@@ -10,11 +10,10 @@ public interface GreeterService {
     void greet();
 
     /**
-     * Asks user to input credentials, then returns them in a map.
+     * Asks user to input credentials, then returns {@link User}.
      *
-     * @param credentialsToAsk - things to ask about user (i.e. name, age)
-     * @return a {@link Map}, where keys - credentials, values - user input
+     * @return user
      */
-    Map<String, String> askUserCredentials(String... credentialsToAsk);
+    User authenticateUser();
 
 }

@@ -13,7 +13,7 @@ public class GreeterConfig {
     @Value("${greeter.greeting}")
     private String greeting;
 
-    @Value("${greeter.input-prompt}")
-    private String inputPrompt;
+    @Value("${greeter.user-auth-prompt}")
+    private String userAuthPrompt;
 
 }
